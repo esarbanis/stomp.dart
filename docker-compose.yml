@@ -1,0 +1,17 @@
+version: '3.9'
+
+services: 
+  activemq:
+    image: apache/activemq-classic:latest
+    container_name: 'activemq'
+    ports: 
+      - 61616:61616
+      - 61613:61613
+      - 8161:8161
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: admin
+      ACTIVEMQ_CONNECTION_USER: admin
+      ACTIVEMQ_CONNECTION_PASSWORD: admin
+      ACTIVEMQ_MIN_MEMORY: 512
+      ACTIVEMQ_MAX_MEMORY: 1024
